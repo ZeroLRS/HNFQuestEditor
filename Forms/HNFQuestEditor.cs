@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Diagnostics;
 
 namespace HNFQuestEditor
 {
@@ -15,6 +16,15 @@ namespace HNFQuestEditor
         public frmHNFQE()
         {
             InitializeComponent();
+        }
+
+        private void frmHNFQE_Load(object sender, EventArgs e)
+        {
+            drpLevelSelect.SelectedIndex = 0;
+        }
+
+        private void drpLevelSelect_SelectedIndexChanged(object sender, EventArgs e)
+        {
         }
     }
 }
