@@ -20,11 +20,16 @@ namespace HNFQuestEditor
 
         private void frmHNFQE_Load(object sender, EventArgs e)
         {
-            drpLevelSelect.SelectedIndex = 0;
+            //drpLevelSelect.SelectedIndex = 0;
         }
 
         private void drpLevelSelect_SelectedIndexChanged(object sender, EventArgs e)
         {
+        }
+        
+        private void openFileDialog1_FileOk(object sender, CancelEventArgs e)
+        {
+
         }
     }
 }
