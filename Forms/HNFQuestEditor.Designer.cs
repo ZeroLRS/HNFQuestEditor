@@ -37,11 +37,11 @@
             this.drpLevelSelect = new System.Windows.Forms.ComboBox();
             this.lblSpawner0 = new System.Windows.Forms.Label();
             this.drpSpawner0 = new System.Windows.Forms.ComboBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.drpSpawner1 = new System.Windows.Forms.ComboBox();
             this.lblSpawner1 = new System.Windows.Forms.Label();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.drpSpawner2 = new System.Windows.Forms.ComboBox();
             this.lblSpawner2 = new System.Windows.Forms.Label();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.drpSpawner3 = new System.Windows.Forms.ComboBox();
             this.lblSpawner3 = new System.Windows.Forms.Label();
             this.txtQuestDescription = new System.Windows.Forms.TextBox();
             this.lblCurrencyReward = new System.Windows.Forms.Label();
@@ -115,7 +115,6 @@
             this.drpLevelSelect.Name = "drpLevelSelect";
             this.drpLevelSelect.Size = new System.Drawing.Size(260, 21);
             this.drpLevelSelect.TabIndex = 6;
-            this.drpLevelSelect.SelectedIndexChanged += new System.EventHandler(this.drpLevelSelect_SelectedIndexChanged);
             // 
             // lblSpawner0
             // 
@@ -141,20 +140,20 @@
             this.drpSpawner0.Size = new System.Drawing.Size(260, 21);
             this.drpSpawner0.TabIndex = 8;
             // 
-            // comboBox1
+            // drpSpawner1
             // 
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.drpSpawner1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.drpSpawner1.FormattingEnabled = true;
+            this.drpSpawner1.Items.AddRange(new object[] {
             "-----------------",
             "Rainbow Fish",
             "Barracuda",
             "Juice Box Hero",
             "Humuhumunukunukuapua\'a"});
-            this.comboBox1.Location = new System.Drawing.Point(112, 468);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(260, 21);
-            this.comboBox1.TabIndex = 10;
+            this.drpSpawner1.Location = new System.Drawing.Point(112, 468);
+            this.drpSpawner1.Name = "drpSpawner1";
+            this.drpSpawner1.Size = new System.Drawing.Size(260, 21);
+            this.drpSpawner1.TabIndex = 10;
             // 
             // lblSpawner1
             // 
@@ -165,20 +164,20 @@
             this.lblSpawner1.TabIndex = 9;
             this.lblSpawner1.Text = "Coral Spawner 1:";
             // 
-            // comboBox2
+            // drpSpawner2
             // 
-            this.comboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
+            this.drpSpawner2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.drpSpawner2.FormattingEnabled = true;
+            this.drpSpawner2.Items.AddRange(new object[] {
             "-----------------",
             "Rainbow Fish",
             "Barracuda",
             "Juice Box Hero",
             "Humuhumunukunukuapua\'a"});
-            this.comboBox2.Location = new System.Drawing.Point(112, 495);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(260, 21);
-            this.comboBox2.TabIndex = 12;
+            this.drpSpawner2.Location = new System.Drawing.Point(112, 495);
+            this.drpSpawner2.Name = "drpSpawner2";
+            this.drpSpawner2.Size = new System.Drawing.Size(260, 21);
+            this.drpSpawner2.TabIndex = 12;
             // 
             // lblSpawner2
             // 
@@ -189,20 +188,20 @@
             this.lblSpawner2.TabIndex = 11;
             this.lblSpawner2.Text = "Coral Spawner 2:";
             // 
-            // comboBox3
+            // drpSpawner3
             // 
-            this.comboBox3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Items.AddRange(new object[] {
+            this.drpSpawner3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.drpSpawner3.FormattingEnabled = true;
+            this.drpSpawner3.Items.AddRange(new object[] {
             "-----------------",
             "Rainbow Fish",
             "Barracuda",
             "Juice Box Hero",
             "Humuhumunukunukuapua\'a"});
-            this.comboBox3.Location = new System.Drawing.Point(112, 522);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(260, 21);
-            this.comboBox3.TabIndex = 14;
+            this.drpSpawner3.Location = new System.Drawing.Point(112, 522);
+            this.drpSpawner3.Name = "drpSpawner3";
+            this.drpSpawner3.Size = new System.Drawing.Size(260, 21);
+            this.drpSpawner3.TabIndex = 14;
             // 
             // lblSpawner3
             // 
@@ -324,11 +323,11 @@
             this.Controls.Add(this.drpQuestType);
             this.Controls.Add(this.numCurrencyReward);
             this.Controls.Add(this.lblCurrencyReward);
-            this.Controls.Add(this.comboBox3);
+            this.Controls.Add(this.drpSpawner3);
             this.Controls.Add(this.lblSpawner3);
-            this.Controls.Add(this.comboBox2);
+            this.Controls.Add(this.drpSpawner2);
             this.Controls.Add(this.lblSpawner2);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.drpSpawner1);
             this.Controls.Add(this.lblSpawner1);
             this.Controls.Add(this.drpSpawner0);
             this.Controls.Add(this.lblSpawner0);
@@ -364,11 +363,11 @@
         private System.Windows.Forms.ComboBox drpLevelSelect;
         private System.Windows.Forms.Label lblSpawner0;
         private System.Windows.Forms.ComboBox drpSpawner0;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox drpSpawner1;
         private System.Windows.Forms.Label lblSpawner1;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox drpSpawner2;
         private System.Windows.Forms.Label lblSpawner2;
-        private System.Windows.Forms.ComboBox comboBox3;
+        private System.Windows.Forms.ComboBox drpSpawner3;
         private System.Windows.Forms.Label lblSpawner3;
         private System.Windows.Forms.TextBox txtQuestDescription;
         private System.Windows.Forms.Label lblCurrencyReward;

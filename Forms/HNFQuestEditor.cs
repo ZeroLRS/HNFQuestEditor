@@ -9,10 +9,17 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Diagnostics;
 
+
 namespace HNFQuestEditor
 {
+
     public partial class frmHNFQE : Form
     {
+        Quest mLoadedQuest;
+        List<String> mQuestNames;
+        List<Fish> mFish;
+        List<ComboBox> mSpawnerDropdowns;
+
         public frmHNFQE()
         {
             InitializeComponent();
@@ -20,14 +27,44 @@ namespace HNFQuestEditor
 
         private void frmHNFQE_Load(object sender, EventArgs e)
         {
-            //drpLevelSelect.SelectedIndex = 0;
+            drpQuestType.SelectedIndex = 0;
+            drpTarget.SelectedIndex = 0;
+            drpLevelSelect.SelectedIndex = 0;
+            drpSpawner0.SelectedIndex = 0;
+            drpSpawner1.SelectedIndex = 0;
+            drpSpawner2.SelectedIndex = 0;
+            drpSpawner3.SelectedIndex = 0;
+            /**********************************
+             * //Sample Code for creating a new control in the form
+             * 
+             * Button testBtn = new Button();
+             * testBtn.Text = "Test Button";
+             * testBtn.Name = "btnTest";
+             * testBtn.Location = new System.Drawing.Point(200, 200);
+             * this.Controls.Add(testBtn);
+             * 
+             **********************************/
+             
+
+
         }
 
-        private void drpLevelSelect_SelectedIndexChanged(object sender, EventArgs e)
+        public void createSpawner()
         {
+
         }
-        
-        private void openFileDialog1_FileOk(object sender, CancelEventArgs e)
+
+        public void confirmForm()
+        {
+            mLoadedQuest.qName = txtQuestName.Text;
+        }
+
+        private void loadLevel(string path)
+        {
+
+        }
+
+        private void saveLevel(string path)
         {
 
         }
