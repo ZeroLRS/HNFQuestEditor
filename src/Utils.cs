@@ -19,7 +19,6 @@ namespace HNFQuestEditor
 
     public struct Level
     {
-        public int id;
         public string name;
 
         public List<Spawner> spawners;
@@ -44,9 +43,8 @@ namespace HNFQuestEditor
 
         public const int LabelStartY = 444;
         public const int DropStartY = 441;
-
-        public const int LabelDistanceY = 471 - 444;
-        public const int DropDistanceY = 468 - 441;
+        
+        public const int DistanceY = 27;
 
         public const int LabelWidth = 88;
         public const int LabelHeight = 13;

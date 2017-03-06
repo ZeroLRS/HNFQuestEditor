@@ -1,0 +1,37 @@
+﻿<!DOCTYPE XML>
+<XML>
+  <Quest>
+    <Name>Sample Quest</Name>
+    <Description>
+      Catch some of those funky fresh fish!
+    </Description>
+    <Prerequisite>0</Prerequisite>
+    <Details>
+      <CurrencyReward>1300</CurrencyReward>
+      <Type>Capture</Type>
+      <Count>10</Count>
+      <Target>Rainbow Fish</Target>
+    </Details>
+    <Level>
+      <Name>Coral Reef</Name>
+      <Spawners>
+        <Spawner>
+          <Name>Cave Spawner</Name>
+          <Fish>Barracuda</Fish>
+        </Spawner>
+        <Spawner>
+          <Name>Coral Spawner 0</Name>
+          <Fish>Rainbow Fish</Fish>
+        </Spawner>
+        <Spawner>
+          <Name>Coral Spawner 1</Name>
+          <Fish>Rainbow Fish</Fish>
+        </Spawner>
+        <Spawner>
+          <Name>Coral Spawner 2</Name>
+          <Fish>Rainbow Fish</Fish>
+        </Spawner>
+      </Spawners>
+    </Level>
+  </Quest>
+</XML>
