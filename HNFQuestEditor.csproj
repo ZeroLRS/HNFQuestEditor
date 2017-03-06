@@ -83,6 +83,7 @@
   <ItemGroup>
     <Content Include="Data\FishList.txt" />
     <Content Include="Data\Levels\Coral Reef\Level.xml" />
+    <Content Include="Data\Quests\Sample Quest.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
