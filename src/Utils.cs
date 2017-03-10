@@ -1,55 +1,55 @@
 ﻿using System.Collections.Generic;
+using System.Diagnostics;
+using System.Xml;
 
 namespace HNFQuestEditor
 {
-    
-    public struct Quest
-    {
-        
-        public string qName;
-        public string qDescription;
+	
+	public class Quest
+	{
+		public Quest()
+		{
+			qName = "Untitled Quest";
+		}
 
-        public Level qLevel;
+		public string qName;
+		public string qDescription;
 
-        public Fish qTarget;
-        public int qCount;
+		public Level qLevel;
 
-        public int qCurrencyReward;
-    }
+		public Fish qTarget;
+		public int qCount;
 
-    public struct Level
-    {
-        public string name;
+		public int qCurrencyReward;
+	}
 
-        public List<Spawner> spawners;
-    }
+	public struct Level
+	{
+		public string mName;
 
-    public struct Spawner
-    {
-        public string name;
+		public List<Spawner> mSpawners;
+	}
 
-        public Fish fish;
-    }
-    public struct Fish
-    {
-        public string name;
-    }
+	public struct Fish
+	{
+		public string mName;
+	}
 
-    //These are NOT magic numbers, they are specifc info from the visual editor
-    public struct spawnerPositionData
-    {
-        public const int LabelX = 14;
-        public const int DropX = 112;
+	//These are NOT magic numbers, they are specifc info from the visual editor
+	public struct spawnerPositionData
+	{
+		public const int LabelX = 14;
+		public const int DropX = 112;
 
-        public const int LabelStartY = 444;
-        public const int DropStartY = 441;
-        
-        public const int DistanceY = 27;
+		public const int LabelStartY = 444;
+		public const int DropStartY = 441;
+		
+		public const int DistanceY = 27;
 
-        public const int LabelWidth = 88;
-        public const int LabelHeight = 13;
-        public const int DropWidth = 260;
-        public const int DropHeight = 21;
-    }
+		public const int LabelWidth = 88;
+		public const int LabelHeight = 13;
+		public const int DropWidth = 260;
+		public const int DropHeight = 21;
+	}
 
 }
