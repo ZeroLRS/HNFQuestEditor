@@ -9,64 +9,102 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Diagnostics;
 
+using System.Xml;
+
 
 namespace HNFQuestEditor
 {
 
-    public partial class frmHNFQE : Form
-    {
-        Quest mLoadedQuest;
-        List<String> mQuestNames;
-        List<Fish> mFish;
-        List<ComboBox> mSpawnerDropdowns;
+	public partial class frmHNFQE : Form
+	{
+		public static string mTitle;
 
-        public frmHNFQE()
-        {
-            InitializeComponent();
-        }
+		Quest mLoadedQuest;
+		List<String> mQuestNames;
+		List<Fish> mFish;
+		List<ComboBox> mSpawnerDropdowns;
 
-        private void frmHNFQE_Load(object sender, EventArgs e)
-        {
-            drpQuestType.SelectedIndex = 0;
-            drpTarget.SelectedIndex = 0;
-            drpLevelSelect.SelectedIndex = 0;
-            drpSpawner0.SelectedIndex = 0;
-            drpSpawner1.SelectedIndex = 0;
-            drpSpawner2.SelectedIndex = 0;
-            drpSpawner3.SelectedIndex = 0;
-            /**********************************
-             * //Sample Code for creating a new control in the form
-             * 
-             * Button testBtn = new Button();
-             * testBtn.Text = "Test Button";
-             * testBtn.Name = "btnTest";
-             * testBtn.Location = new System.Drawing.Point(200, 200);
-             * this.Controls.Add(testBtn);
-             * 
-             **********************************/
-             
+		public frmHNFQE()
+		{
+			InitializeComponent();
+		}
 
+		private void frmHNFQE_Load(object sender, EventArgs e)
+		{
+			//Populate quest typtes
+			drpQuestType.SelectedIndex = 0;
+			//Populate fish types
+			drpTarget.SelectedIndex = 0;
+			//Populate level list
+			drpLevelSelect.SelectedIndex = 0;
 
-        }
+			mTitle = this.Text;
+			mLoadedQuest = new Quest();
 
-        public void createSpawner()
-        {
+			loadLevel("../../Data/Levels/Coral Reef/Level.xml");
 
-        }
+		}
 
-        public void confirmForm()
-        {
-            mLoadedQuest.qName = txtQuestName.Text;
-        }
+		public void createSpawner()
+		{
 
-        private void loadLevel(string path)
-        {
+		}
 
-        }
+		public void confirmForm()
+		{
+			mLoadedQuest.qName = txtQuestName.Text;
+		}
 
-        private void saveLevel(string path)
-        {
+		private void loadLevel(string path)
+		{
+			//Load up the level's xml file
+			XmlDocument levelDoc = new XmlDocument();
+			levelDoc.Load(path);
 
-        }
-    }
+			//Create a new level to store data in
+			Level currLevel = new Level();
+			currLevel.mSpawners = new List<Spawner>();
+
+			Debug.WriteLine("Going through xml");
+			//This is the <Level>, skipping the <?xml ... ?>
+			XmlNode levelNode = levelDoc.ChildNodes[1];
+
+			//Loop through each child node creating the needed data from each
+			foreach (XmlNode childNode in levelNode.ChildNodes)
+			{
+				if(childNode.Name == "Name")
+				{
+					//Set the window's title 
+					this.Text = mTitle + "  - " + mLoadedQuest.qName + " - " + childNode.InnerText;
+					currLevel.mName = childNode.Name;
+				}
+				else
+				if (childNode.Name == "Thumbnail")
+				{
+					//Load in the thumbnail and set it to display.
+				}
+				else
+				if (childNode.Name == "Spawner")
+				{
+					Spawner currSpawner = new Spawner(childNode);
+					currLevel.mSpawners.Add(currSpawner);
+				}
+
+			}
+
+			Debug.WriteLine("Done with xml");
+
+		}
+
+		private void saveQuest(string path)
+		{
+
+		}
+
+		private void button1_Click(object sender, EventArgs e)
+		{
+			SpawnerEdit editForm = new SpawnerEdit();
+			editForm.Show();
+		}
+	}
 }
