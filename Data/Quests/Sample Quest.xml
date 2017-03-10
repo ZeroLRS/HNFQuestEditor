@@ -17,19 +17,31 @@
       <Spawners>
         <Spawner>
           <Name>Cave Spawner</Name>
-          <Fish>Barracuda</Fish>
+          <Fish>
+            <Name>Barracuda</Name>
+            <Chance>100</Chance>
+          </Fish>
         </Spawner>
         <Spawner>
           <Name>Coral Spawner 0</Name>
-          <Fish>Rainbow Fish</Fish>
+          <Fish>
+            <Name>Rainbow Coral Fish</Name>
+            <Chance>100</Chance>
+          </Fish>
         </Spawner>
         <Spawner>
           <Name>Coral Spawner 1</Name>
-          <Fish>Rainbow Fish</Fish>
+          <Fish>
+            <Name>Rainbow Coral Fish</Name>
+            <Chance>100</Chance>
+          </Fish>
         </Spawner>
         <Spawner>
           <Name>Coral Spawner 2</Name>
-          <Fish>Rainbow Fish</Fish>
+          <Fish>
+            <Name>Rainbow Coral Fish</Name>
+            <Chance>100</Chance>
+          </Fish>
         </Spawner>
       </Spawners>
     </Level>

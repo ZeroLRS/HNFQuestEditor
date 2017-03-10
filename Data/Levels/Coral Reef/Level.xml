@@ -1,23 +1,21 @@
-﻿<!DOCTYPE XML>
-<XML>
-  <Level>
-    <Name>Coral Reef</Name>
-    <Thumbnail>CoralReef.png</Thumbnail>
-    <Spawner>
-      <Name>Cave Spawner</Name>
-      <Default>Barracuda</Default>
-    </Spawner>
-    <Spawner>
-      <Name>Coral Spawner 0</Name>
-      <Default>Rainbow Fish</Default>
-    </Spawner>
-    <Spawner>
-      <Name>Coral Spawner 1</Name>
-      <Default>Rainbow Fish</Default>
-    </Spawner>
-    <Spawner>
-      <Name>Coral Spawner 2</Name>
-      <Default>Rainbow Fish</Default>
-    </Spawner>
-  </Level>
-</XML>
+﻿<?xml version="1.0" standalone="yes"?>
+<Level>
+  <Name>Coral Reef</Name>
+  <Thumbnail>CoralReef.png</Thumbnail>
+  <Spawner>
+    <Name>Cave Spawner</Name>
+    <Default>Barracuda</Default>
+  </Spawner>
+  <Spawner>
+    <Name>Coral Spawner 0</Name>
+    <Default>Rainbow Fish</Default>
+  </Spawner>
+  <Spawner>
+    <Name>Coral Spawner 1</Name>
+    <Default>Rainbow Fish</Default>
+  </Spawner>
+  <Spawner>
+    <Name>Coral Spawner 2</Name>
+    <Default>Rainbow Fish</Default>
+  </Spawner>
+</Level>
