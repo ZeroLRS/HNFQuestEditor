@@ -8,14 +8,14 @@
   </Spawner>
   <Spawner>
     <Name>Coral Spawner 0</Name>
-    <Default>Rainbow Fish</Default>
+    <Default>Rainbow Coral Fish</Default>
   </Spawner>
   <Spawner>
     <Name>Coral Spawner 1</Name>
-    <Default>Rainbow Fish</Default>
+    <Default>Rainbow Coral Fish</Default>
   </Spawner>
   <Spawner>
     <Name>Coral Spawner 2</Name>
-    <Default>Rainbow Fish</Default>
+    <Default>Rainbow Coral Fish</Default>
   </Spawner>
 </Level>

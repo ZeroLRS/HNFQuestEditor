@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Diagnostics;
+using System.IO;
 
 using System.Xml;
 
@@ -20,11 +21,9 @@ namespace HNFQuestEditor
 		public static string mTitle;
 
 		Quest mLoadedQuest;
-		List<String> mQuestNames;
-		List<Fish> mFish;
-		List<ComboBox> mSpawnerDropdowns;
+        List<string> mFish;
 
-		public frmHNFQE()
+        public frmHNFQE()
 		{
 			InitializeComponent();
 		}
@@ -41,7 +40,10 @@ namespace HNFQuestEditor
 			mTitle = this.Text;
 			mLoadedQuest = new Quest();
 
-			loadLevel("../../Data/Levels/Coral Reef/Level.xml");
+            mFish = new List<string>();
+            loadFish("../../Data/FishList.txt");
+
+            loadLevel("../../Data/Levels/Coral Reef/Level.xml");
 
 		}
 
@@ -92,7 +94,49 @@ namespace HNFQuestEditor
 
 			}
 
-			Debug.WriteLine("Done with xml");
+            int spawnerIndex = 0;
+            foreach (Spawner spawner in currLevel.mSpawners)
+            {
+                /**********************************
+                * //Sample Code for creating a new control in the form
+                * 
+                * Button testBtn = new Button();
+                * testBtn.Text = "Test Button";
+                * testBtn.Name = "btnTest";
+                * testBtn.Location = new System.Drawing.Point(200, 200);
+                * this.Controls.Add(testBtn);
+                * 
+                **********************************/
+
+                Label sLbl = new Label();
+                sLbl.Text = spawner.mName + ":";
+                sLbl.Name = "lblSpawner" + spawnerIndex;
+                sLbl.Location = new System.Drawing.Point(spawnerPositionData.LabelX, spawnerPositionData.LabelStartY + spawnerPositionData.DistanceY * spawnerIndex);
+                sLbl.Size = new Size(spawnerPositionData.LabelWidth, spawnerPositionData.LabelHeight);
+
+                Button sBtn = new Button();
+                sBtn.Text = "Edit Spawner";
+                sBtn.Name = "btnSpawner" + spawnerIndex;
+                sBtn.Location = new System.Drawing.Point(spawnerPositionData.ButtonX, spawnerPositionData.ButtonStartY + spawnerPositionData.DistanceY * spawnerIndex);
+                sBtn.Size = new Size(spawnerPositionData.ButtonWidth, spawnerPositionData.ButtonHeight);
+
+                SpawnerEdit sForm = new SpawnerEdit(mFish);
+                for (int i = 0; i < spawner.mSpawns.Count; i++)
+                {
+                    int fishIndex = mFish.IndexOf(spawner.mSpawns[i].mFish.mName);
+                    sForm.mFish[i].SelectedIndex = fishIndex + 1;
+                    sForm.mChances[i].Value = spawner.mSpawns[i].mChance;
+                }
+
+                sBtn.Click += (s,e) => { sForm.Show(); };
+
+                this.Controls.Add(sLbl);
+                this.Controls.Add(sBtn);
+
+                spawnerIndex++;
+            }
+
+            Debug.WriteLine("Done with xml");
 
 		}
 
@@ -100,6 +144,15 @@ namespace HNFQuestEditor
 		{
 
 		}
+
+        private void loadFish(string path)
+        {
+            string[] lines = File.ReadAllLines(path);
+            foreach (string line in lines)
+            {
+                mFish.Add(line);
+            }
+        }
 
 		private void button1_Click(object sender, EventArgs e)
 		{

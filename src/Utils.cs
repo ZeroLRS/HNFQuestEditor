@@ -4,8 +4,8 @@ using System.Xml;
 
 namespace HNFQuestEditor
 {
-	
-	public class Quest
+
+    public class Quest
 	{
 		public Quest()
 		{
@@ -35,21 +35,21 @@ namespace HNFQuestEditor
 		public string mName;
 	}
 
-	//These are NOT magic numbers, they are specifc info from the visual editor
+	//These are NOT magic numbers, they are specifc info from the form editor
 	public struct spawnerPositionData
 	{
 		public const int LabelX = 14;
-		public const int DropX = 112;
+		public const int ButtonX = 112;
 
-		public const int LabelStartY = 444;
-		public const int DropStartY = 441;
+		public const int LabelStartY = 485;
+		public const int ButtonStartY = 480;
 		
 		public const int DistanceY = 27;
 
-		public const int LabelWidth = 88;
+		public const int LabelWidth = 92;
 		public const int LabelHeight = 13;
-		public const int DropWidth = 260;
-		public const int DropHeight = 21;
+		public const int ButtonWidth = 260;
+		public const int ButtonHeight = 21;
 	}
 
 }

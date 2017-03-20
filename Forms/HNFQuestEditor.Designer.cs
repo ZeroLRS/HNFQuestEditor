@@ -50,6 +50,8 @@ namespace HNFQuestEditor
             this.btnFileMenu = new System.Windows.Forms.ToolStripMenuItem();
             this.btnSave = new System.Windows.Forms.ToolStripMenuItem();
             this.btnLoad = new System.Windows.Forms.ToolStripMenuItem();
+            this.txtPrerequisite = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.imgLevelPicture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numCurrencyReward)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numTargetCount)).BeginInit();
@@ -95,7 +97,7 @@ namespace HNFQuestEditor
             // lblLevelSelect
             // 
             this.lblLevelSelect.AutoSize = true;
-            this.lblLevelSelect.Location = new System.Drawing.Point(14, 432);
+            this.lblLevelSelect.Location = new System.Drawing.Point(14, 458);
             this.lblLevelSelect.Name = "lblLevelSelect";
             this.lblLevelSelect.Size = new System.Drawing.Size(36, 13);
             this.lblLevelSelect.TabIndex = 5;
@@ -111,7 +113,7 @@ namespace HNFQuestEditor
             "Coral Reefs",
             "Deep Ocean",
             "Ship Wreck"});
-            this.drpLevelSelect.Location = new System.Drawing.Point(112, 429);
+            this.drpLevelSelect.Location = new System.Drawing.Point(112, 455);
             this.drpLevelSelect.Name = "drpLevelSelect";
             this.drpLevelSelect.Size = new System.Drawing.Size(260, 21);
             this.drpLevelSelect.TabIndex = 6;
@@ -119,7 +121,7 @@ namespace HNFQuestEditor
             // lblSpawner0
             // 
             this.lblSpawner0.AutoSize = true;
-            this.lblSpawner0.Location = new System.Drawing.Point(14, 459);
+            this.lblSpawner0.Location = new System.Drawing.Point(14, 485);
             this.lblSpawner0.Name = "lblSpawner0";
             this.lblSpawner0.Size = new System.Drawing.Size(80, 13);
             this.lblSpawner0.TabIndex = 7;
@@ -136,7 +138,7 @@ namespace HNFQuestEditor
             // lblCurrencyReward
             // 
             this.lblCurrencyReward.AutoSize = true;
-            this.lblCurrencyReward.Location = new System.Drawing.Point(14, 351);
+            this.lblCurrencyReward.Location = new System.Drawing.Point(14, 377);
             this.lblCurrencyReward.Name = "lblCurrencyReward";
             this.lblCurrencyReward.Size = new System.Drawing.Size(92, 13);
             this.lblCurrencyReward.TabIndex = 15;
@@ -149,7 +151,7 @@ namespace HNFQuestEditor
             0,
             0,
             0});
-            this.numCurrencyReward.Location = new System.Drawing.Point(112, 349);
+            this.numCurrencyReward.Location = new System.Drawing.Point(112, 375);
             this.numCurrencyReward.Maximum = new decimal(new int[] {
             -727379968,
             232,
@@ -168,7 +170,7 @@ namespace HNFQuestEditor
             "-----------------",
             "Capture",
             "Slay"});
-            this.drpQuestType.Location = new System.Drawing.Point(112, 375);
+            this.drpQuestType.Location = new System.Drawing.Point(112, 401);
             this.drpQuestType.Name = "drpQuestType";
             this.drpQuestType.Size = new System.Drawing.Size(94, 21);
             this.drpQuestType.TabIndex = 17;
@@ -183,7 +185,7 @@ namespace HNFQuestEditor
             "Barracuda",
             "Juice Box Hero",
             "Humuhumunukunukuapua\'a"});
-            this.drpTarget.Location = new System.Drawing.Point(112, 402);
+            this.drpTarget.Location = new System.Drawing.Point(112, 428);
             this.drpTarget.Name = "drpTarget";
             this.drpTarget.Size = new System.Drawing.Size(260, 21);
             this.drpTarget.TabIndex = 18;
@@ -191,7 +193,7 @@ namespace HNFQuestEditor
             // lblQuestType
             // 
             this.lblQuestType.AutoSize = true;
-            this.lblQuestType.Location = new System.Drawing.Point(14, 378);
+            this.lblQuestType.Location = new System.Drawing.Point(14, 404);
             this.lblQuestType.Name = "lblQuestType";
             this.lblQuestType.Size = new System.Drawing.Size(65, 13);
             this.lblQuestType.TabIndex = 19;
@@ -200,7 +202,7 @@ namespace HNFQuestEditor
             // lblTarget
             // 
             this.lblTarget.AutoSize = true;
-            this.lblTarget.Location = new System.Drawing.Point(14, 405);
+            this.lblTarget.Location = new System.Drawing.Point(14, 431);
             this.lblTarget.Name = "lblTarget";
             this.lblTarget.Size = new System.Drawing.Size(72, 13);
             this.lblTarget.TabIndex = 20;
@@ -209,7 +211,7 @@ namespace HNFQuestEditor
             // lblCount
             // 
             this.lblCount.AutoSize = true;
-            this.lblCount.Location = new System.Drawing.Point(212, 378);
+            this.lblCount.Location = new System.Drawing.Point(212, 404);
             this.lblCount.Name = "lblCount";
             this.lblCount.Size = new System.Drawing.Size(38, 13);
             this.lblCount.TabIndex = 21;
@@ -217,14 +219,14 @@ namespace HNFQuestEditor
             // 
             // numTargetCount
             // 
-            this.numTargetCount.Location = new System.Drawing.Point(256, 376);
+            this.numTargetCount.Location = new System.Drawing.Point(256, 402);
             this.numTargetCount.Name = "numTargetCount";
             this.numTargetCount.Size = new System.Drawing.Size(63, 20);
             this.numTargetCount.TabIndex = 22;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(112, 454);
+            this.button1.Location = new System.Drawing.Point(112, 480);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(260, 21);
             this.button1.TabIndex = 23;
@@ -263,12 +265,30 @@ namespace HNFQuestEditor
             this.btnLoad.Size = new System.Drawing.Size(152, 22);
             this.btnLoad.Text = "Load";
             // 
+            // txtPrerequisite
+            // 
+            this.txtPrerequisite.Location = new System.Drawing.Point(112, 349);
+            this.txtPrerequisite.Name = "txtPrerequisite";
+            this.txtPrerequisite.Size = new System.Drawing.Size(260, 20);
+            this.txtPrerequisite.TabIndex = 26;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(14, 352);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(65, 13);
+            this.label1.TabIndex = 27;
+            this.label1.Text = "Prerequisite:";
+            // 
             // frmHNFQE
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(384, 562);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.txtPrerequisite);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.numTargetCount);
             this.Controls.Add(this.lblCount);
@@ -328,5 +348,7 @@ namespace HNFQuestEditor
         private System.Windows.Forms.ToolStripMenuItem btnFileMenu;
         private System.Windows.Forms.ToolStripMenuItem btnSave;
         private System.Windows.Forms.ToolStripMenuItem btnLoad;
+        private System.Windows.Forms.TextBox txtPrerequisite;
+        private System.Windows.Forms.Label label1;
     }
 }

@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Xml;
+using System.Diagnostics;
 
 namespace HNFQuestEditor
 {
@@ -21,7 +22,8 @@ namespace HNFQuestEditor
 					SpawnChance newChance;
 					newChance.mFish.mName = childNode.InnerText;
 					newChance.mChance = 100;
-				}
+                    mSpawns.Add(newChance);
+                }
 				else
 				if (childNode.Name == "Fish")
 				{

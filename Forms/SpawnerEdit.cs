@@ -13,18 +13,15 @@ namespace HNFQuestEditor
 {
 	public partial class SpawnerEdit : Form
 	{
-		ComboBox[] mFish;
-		NumericUpDown[] mChances;
+		public ComboBox[] mFish;
+		public NumericUpDown[] mChances;
 
 		public SpawnerEdit()
 		{
 			InitializeComponent();
-		}
 
-		private void SpawnerEdit_Load(object sender, EventArgs e)
-		{
-			mFish = new ComboBox[10];
-			mChances= new NumericUpDown[10];
+            mFish = new ComboBox[10];
+            mChances = new NumericUpDown[10];
 
             mFish[0] = drpFish1;
             mFish[1] = drpFish2;
@@ -47,6 +44,20 @@ namespace HNFQuestEditor
             mChances[7] = numFish8;
             mChances[8] = numFish9;
             mChances[9] = numFish10;
+        }
+
+        public SpawnerEdit(List<string> fishList) : this()
+        {
+            for (int i = 0; i < 10; i++)
+            {
+                mFish[i].Items.Clear();
+                mFish[i].Items.Add("-----------------");
+                mFish[i].Items.AddRange(fishList.ToArray());
+            }
+        }
+
+		private void SpawnerEdit_Load(object sender, EventArgs e)
+		{
 
         }
 
